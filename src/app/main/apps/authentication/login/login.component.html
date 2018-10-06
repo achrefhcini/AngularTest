@@ -1,0 +1,27 @@
+<mat-card class="example-card">
+
+  <mat-card-content class="content-card" >
+    <form name="loginForm" [formGroup]="loginForm" #l="ngForm" (ngSubmit)="login(l)" novalidate>
+            <mat-form-field class="form-exemple">
+              <input  matInput placeholder="Email" formControlName="email">
+              <mat-error *ngIf="loginFormErrors.email.required">
+                  Le courriel est requis
+              </mat-error>
+              <mat-error *ngIf="!loginFormErrors.email.required && loginFormErrors.email.email">
+                  S'il vous plaît, mettez une adresse email valide
+              </mat-error>
+            </mat-form-field>
+          
+            <mat-form-field class="form-exemple">
+              <input matInput type="password" placeholder="Mot de passe" formControlName="password">
+              <mat-error *ngIf="loginFormErrors.password.required">
+                  Mot de passe requis
+              </mat-error>
+            </mat-form-field>
+            <mat-card-actions>
+                <button mat-raised-button [disabled]="loginForm.invalid" color="primary">Se Connecter</button>
+              </mat-card-actions>
+    </form>
+  </mat-card-content>
+
+</mat-card>

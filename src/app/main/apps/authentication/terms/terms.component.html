@@ -1,0 +1,39 @@
+<mat-card class="example-card">
+    <mat-card-header>
+        <button mat-raised-button (click)="logout()">Retour</button>
+    </mat-card-header>
+    <mat-card-content class="content-card" id="terms" (scroll)="onTermsScroll($event)">
+        <p>
+            Consectetur luctus sagittis ridiculus tincidunt euismod a euismod felis magna conubia hendrerit? Neque elementum mauris blandit? Nisi non inceptos ornare, ante cursus. Consectetur quisque felis cum lacinia! Taciti magnis id ante adipiscing elit ridiculus. Class mattis placerat vel blandit bibendum. Dictum at placerat feugiat accumsan mattis dis urna enim nunc tristique sed per. Egestas inceptos elit pharetra cras; ante viverra commodo tortor diam lectus. Rutrum gravida integer morbi nullam, mattis imperdiet condimentum himenaeos porta? Malesuada felis ligula nulla ornare. Mi nec magnis pulvinar posuere libero tortor phasellus quisque non. Dictum turpis molestie curae; ultrices.
+            </p>
+            <p>
+            Dis placerat vivamus gravida. Amet tristique ullamcorper pharetra porttitor erat? Rhoncus nullam malesuada non ultrices vehicula etiam platea. Vulputate interdum per, hendrerit convallis rhoncus quam sed laoreet dignissim conubia. Enim magna eget duis feugiat? Ultrices leo lectus ipsum! Dictumst nunc a venenatis sollicitudin pharetra congue. Facilisis tempor himenaeos ac torquent. Dui sagittis dignissim justo lobortis lacinia litora hendrerit purus odio dolor id. Himenaeos accumsan interdum mauris rutrum cras cubilia egestas auctor. Mollis rutrum nunc eget sem ut risus rhoncus iaculis purus montes tristique vestibulum. Sodales molestie nostra diam tortor duis mollis ligula urna diam phasellus.
+            </p>
+            <p>
+            Interdum cursus convallis morbi feugiat etiam non odio sodales, ad cum in libero? Magna natoque faucibus accumsan est, mattis luctus eu ridiculus vehicula! Ut faucibus ut facilisi pulvinar arcu consequat turpis. Consequat taciti urna tempus mi purus justo eget feugiat hac faucibus risus. Posuere, lobortis eget sagittis. Suspendisse vulputate massa dui inceptos adipiscing. Lobortis dignissim dui amet sollicitudin sit cubilia sociis ad. Litora himenaeos phasellus magna erat lobortis mauris rhoncus nostra erat dolor curabitur litora. Platea massa viverra interdum nam risus pellentesque ad blandit sagittis.
+            </p>
+            <p>
+            Aliquet iaculis venenatis, iaculis volutpat vulputate. Lacinia mus integer laoreet faucibus dui ultrices ac fames? Aenean tellus varius lacinia integer mi odio sapien leo hendrerit nostra! Suscipit nullam rutrum mollis fames posuere facilisis felis venenatis phasellus scelerisque nostra scelerisque. Arcu pellentesque phasellus molestie sodales. Curae; sagittis non malesuada ad porttitor vitae ante eget vulputate orci. Orci hac gravida ridiculus hendrerit habitant quisque vulputate facilisis. Dis blandit metus sapien ligula. Netus hac interdum in dui leo urna maecenas. Risus auctor magnis leo enim cursus bibendum molestie nulla urna elit nam ac. Platea nec fames posuere interdum.
+            </p>
+            <p>
+            Tempor hac imperdiet habitasse ullamcorper magna nibh fames fermentum enim tempus convallis! Platea odio molestie urna facilisi, ac curae; sem faucibus. Tortor tristique nec porta. Dapibus venenatis habitasse et penatibus sapien lorem imperdiet nullam facilisis quam est. Risus curabitur nec in himenaeos commodo phasellus lobortis. Feugiat praesent fusce viverra? Donec posuere feugiat magnis vitae facilisi penatibus diam et. Felis.
+            </p>
+       
+    </mat-card-content>
+    <mat-card-footer class="term-footer">
+        <form name="termForm" [formGroup]="termForm" #l="ngForm" (ngSubmit)="validate()" novalidate>
+            <mat-card-actions>
+              <div class="term-checkbox">
+                  <mat-checkbox formControlName="acceptTerm" [disabled]="testDisabled">J'accepte</mat-checkbox>
+
+              </div>
+              <div class="term-button">
+
+                <button  mat-raised-button [disabled]="termForm.invalid" color="primary">Valider</button>
+
+                </div>
+              </mat-card-actions>
+        </form>
+    </mat-card-footer>
+  
+  </mat-card>
